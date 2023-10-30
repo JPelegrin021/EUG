@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Página web de un producto</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <style>
   body {
@@ -64,7 +63,11 @@ footer {
 }
 
 img {
-  max-width: 100%;
+  max-width: 20%;
+}
+
+.inpcmnt {
+  text-align: center;
 }
 
 .boton {
@@ -77,6 +80,13 @@ img {
 
 .boton:hover {
   background-color: #ccc;
+}
+
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 </style>
@@ -92,7 +102,7 @@ img {
   </header>
 
   <section id="contenido">
-    <img src="imagen.jpg" alt="Imagen del producto">
+    <img src="259940_0_enquun.png" alt="Imagen del producto">
     <h2>Descripción</h2>
     <p>
       El soporte para teléfono móvil Ambrane Twistand es un dispositivo que permite colocar el teléfono en una posición vertical u horizontal. Está fabricado con materiales de alta calidad y tiene un diseño elegante.
@@ -114,8 +124,9 @@ img {
         <p>El soporte es de buena calidad, pero el precio es un poco alto.</p>
       </li>
     </ul>
-    <div class="boton">
-      <a href="#">Comprar</a>
+    <div class="inpcmnt">
+      <input type="text" name="Comenta" id="txtcmnt">
+      <button>Send</button>
     </div>
   </section>
 

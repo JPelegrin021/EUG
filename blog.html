@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Página web de un blog</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <style>
   body {
@@ -48,10 +47,20 @@ nav a:hover {
 .searchbar {
   width: 250px;
   margin: 0 auto;
+  display: flex;
+  gap: 5px;
+}
+
+.searchbar a {
+  text-decoration: none;
+  color: #000;
 }
 
 .post {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .post h2 {
@@ -60,7 +69,8 @@ nav a:hover {
 }
 
 .post img {
-  max-width: 100%;
+  max-width: 20%;
+  max-height: 20%;
 }
 
 .post p {
@@ -77,13 +87,20 @@ nav a:hover {
   color: #ccc;
 }
 
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
 </style>
 <body>
 
   <header>
     <h1>Blog de productos</h1>
     <nav>
-      <a href="#">Inicio</a>
+      <a href="index.html">Inicio</a>
       <a href="#">Categorías</a>
       <a href="#">Login</a>
     </nav>
@@ -92,14 +109,15 @@ nav a:hover {
   <section id="contenido">
     <div class="searchbar">
       <input type="text" placeholder="Buscar producto...">
+      <button type="button"><a href="post.html">Crear Post</a></button>
     </div>
     <div class="post">
       <h2>Título del post</h2>
-      <img src="imagen.jpg" alt="Imagen del post">
+      <img src="259940_0_enquun.png" alt="Imagen del post">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum metus ornare lectus consectetur, et rutrum ligula ultricies. Nullam lobortis vehicula laoreet. Sed ac tristique condimentum interdum, Duis malesuada mattis diam et feugiat. Duis condimentum nibh a massa congue facilisis.
       </p>
-      <a href="producto.html">Ver más</a>
+      <a href="product.html">Ver más</a>
     </div>
   </section>
 

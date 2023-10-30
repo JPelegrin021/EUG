@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de publicación</title>
+</head>
+<style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  width: 500px;
+}
+
+form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+</style>
+<body>
+
+  <header>
+    <h1>Publica tu post</h1>
+  </header>
+
+  <main>
+    <form action="post.php" method="post">
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" name="titulo" id="titulo" placeholder="Título de tu post">
+      </div>
+      <div class="form-group">
+        <label for="resumen">Resumen</label>
+        <textarea name="resumen" id="resumen" rows="5" placeholder="Resumen de tu post"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="contenido">Contenido</label>
+        <textarea name="contenido" id="contenido" rows="10" placeholder="Contenido de tu post"></textarea>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Publicar">
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Copyright © 2023</p>
+  </footer>
+
+</body>
+</html>
