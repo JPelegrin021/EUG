@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página web de un blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #ccc;
+}
+
+#contenido {
+  padding: 20px;
+}
+
+.searchbar {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.post {
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.post img {
+  max-width: 100%;
+}
+
+.post p {
+  font-size: 1em;
+  color: #666;
+}
+
+.post a {
+  text-decoration: none;
+  color: #000;
+}
+
+.post a:hover {
+  color: #ccc;
+}
+
+</style>
+<body>
+
+  <header>
+    <h1>Blog de productos</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Categorías</a>
+      <a href="#">Login</a>
+    </nav>
+  </header>
+
+  <section id="contenido">
+    <div class="searchbar">
+      <input type="text" placeholder="Buscar producto...">
+    </div>
+    <div class="post">
+      <h2>Título del post</h2>
+      <img src="imagen.jpg" alt="Imagen del post">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum metus ornare lectus consectetur, et rutrum ligula ultricies. Nullam lobortis vehicula laoreet. Sed ac tristique condimentum interdum, Duis malesuada mattis diam et feugiat. Duis condimentum nibh a massa congue facilisis.
+      </p>
+      <a href="producto.html">Ver más</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2023 Ambrane</p>
+  </footer>
+
+</body>
+</html>
