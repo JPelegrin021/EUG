@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Página web de un blog</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script defer src="scriptblg.js"></script>
 </head>
 <style>
   body {
@@ -11,9 +13,14 @@
 }
 
 header {
+  columns: 1;
   background-color: #f1f1f1;
   padding: 20px;
   border-bottom: 1px solid #ccc;
+}
+
+header img {
+  width: 85px;
 }
 
 h1 {
@@ -22,10 +29,11 @@ h1 {
   color: #000;
 }
 
+
 nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  margin: 2px;
 }
 
 nav a {
@@ -87,6 +95,26 @@ nav a:hover {
   color: #ccc;
 }
 
+.modal {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
 footer {
   background-color: #ffffff;
   padding: 20px;
@@ -98,11 +126,12 @@ footer {
 <body>
 
   <header>
+    <img src="thumbnail_Captura.png" alt="logo">
     <h1>Blog de productos</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="#">Categorías</a>
-      <a href="#">Login</a>
+      <a href="#" id="loginBtn">Login</a>
     </nav>
   </header>
 
@@ -111,19 +140,30 @@ footer {
       <input type="text" placeholder="Buscar producto...">
       <button type="button"><a href="post.html">Crear Post</a></button>
     </div>
-    <div class="post">
-      <h2>Título del post</h2>
-      <img src="259940_0_enquun.png" alt="Imagen del post">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum metus ornare lectus consectetur, et rutrum ligula ultricies. Nullam lobortis vehicula laoreet. Sed ac tristique condimentum interdum, Duis malesuada mattis diam et feugiat. Duis condimentum nibh a massa congue facilisis.
-      </p>
-      <a href="product.html">Ver más</a>
+    <div id="posts-container">
+      
+    </div>
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <button class="close" id="closeBtn">&times;</button>
+        <h2>Iniciar sesión</h2>
+        <form>
+          <div class="form-group">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username">
+          </div>
+          <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <button type="button" id="login">Iniciar sesión</button>
+          <p>O <a href="#">Regístrate</a></p>
+        </form>
+      </div>
     </div>
   </section>
-
   <footer>
-    <p>Copyright &copy; 2023 Ambrane</p>
+    <p>Copyright &copy; 2023 NewsWave</p>
   </footer>
-
 </body>
 </html>
