@@ -69,14 +69,13 @@ footer {
 
 </style>
 <body>
-
   <header>
-    <button type="button"><a href="blog.html">Atras</a></button>
+    <a href="blog.html">Atrás</a>
     <h1>Publica tu post</h1>
   </header>
 
   <main>
-    <form action="post.php" method="post">
+    <form action="post.php" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="titulo">Título</label>
         <input type="text" name="titulo" id="titulo" placeholder="Título de tu post">
@@ -92,7 +91,7 @@ footer {
         <input type="file" name="imagen" id="imagen">
       </div>
       <div class="form-group">
-        <input type="submit" value="Publicar" onclick="reportError">
+        <input type="submit" value="Publicar">
       </div>
     </form>
   </main>
@@ -100,6 +99,5 @@ footer {
   <footer>
     <p>Copyright &copy; 2023 NewsWave</p>
   </footer>
-
 </body>
 </html>

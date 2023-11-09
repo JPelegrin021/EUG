@@ -43,27 +43,63 @@ nav a:hover {
   padding: 20px;
 }
 
+#qso {
+  display: flex;
+  gap: 2%;
+  padding: 2%;
+}
+
 #qs {
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #ffffffa0;
 }
 
 #qo {
+  text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #ffffffa0;
+}
+
+#cntsp {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 10%;
+  background-color: #ffffffa0;
+  width: 100%;
+}
+
+.prtnr {
+  padding: 2%;
+  mix-blend-mode: color-burn;
+
 }
 
 h2 {
   font-size: 1.5em;
   font-weight: bold;
   color: #000;
+  margin-left: 2%;
 }
 
-p {
+#qso p {
   font-size: 1em;
   color: #666;
+  padding: 10%;
+}
+
+#Contacto {
+  display: block;
+  max-width: 50%;
+}
+
+form {
+  display: grid;
+  row-gap: 10%;
+  
 }
 
 footer {
@@ -72,8 +108,6 @@ footer {
   text-align: center;
   border-top: 1px solid #ccc;
 }
-
-/* Colores personalizados */
 
 .boton {
   background-color: #000;
