@@ -8,7 +8,6 @@ if ($mysqli->connect_error) {
 
 $username = $_POST['username'];
 $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-$email = $_POST['email'];
 
 $query = "INSERT INTO users (username, password, email, role_id) VALUES ('$username', '$password', '$email', 1)";
 

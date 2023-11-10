@@ -9,6 +9,7 @@ $port = 3306;
 $mysqli = new mysqli($host, $user, $password, $database, $port);
 
 if ($mysqli->connect_error) {
+    http_response_code(500);
     die('Error de conexión a la base de datos: ' . $mysqli->connect_error);
 }
 
