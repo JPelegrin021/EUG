@@ -75,7 +75,7 @@ nav a:hover {
 .prtnr {
   padding: 2%;
   mix-blend-mode: color-burn;
-
+  margin-inline-end: 0,5%;
 }
 
 h2 {
@@ -92,6 +92,8 @@ h2 {
 }
 
 #Contacto {
+  
+  padding: 3%;
   display: block;
   max-width: 50%;
 }
