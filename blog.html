@@ -107,6 +107,7 @@ nav a:hover {
 
     .modal-content {
       position: absolute;
+      text-align: center;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -114,6 +115,22 @@ nav a:hover {
       padding: 20px;
       border-radius: 5px;
     }
+
+  #login {
+   
+    text-align: center;
+    padding: 1%;
+  }
+
+  #login .form-group {
+    margin-top: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  #login button {
+    margin: 3%;
+  }
 
 footer {
   background-color: #ffffff;
@@ -147,7 +164,7 @@ footer {
       <div class="modal-content">
         <button class="close" id="closeBtn">&times;</button>
         <h2>Iniciar sesión</h2>
-        <form>
+        <form action="login.php" id="login">
           <div class="form-group">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username">
