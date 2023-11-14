@@ -1,0 +1,282 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    width: 100%;
+  }
+
+  
+  header h1 {
+    color: #ffffff;
+  }
+  .spanSaludo{
+
+  position: absolute; right: 0px;
+  margin-right: 2%;
+
+  }
+  header {
+    background-color: #444242;
+    opacity: 80%;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    margin: 2%;
+    border-radius: 12px;
+  }
+  
+  header img {
+    width: 85px;
+  }
+  
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+  }
+  
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  nav a {
+    background-color: #06f;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 1%;
+  }
+  
+  nav span {
+    justify-content: flex-end;
+  }
+
+  nav a:hover {
+    background-color: rgb(10, 88, 206);
+  }
+  
+  #contenido {
+    padding: 20px;
+  }
+  
+  .searchbar {
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    gap: 5px;
+  }
+  
+.searchbar input {
+   border: #06f 2px solid;
+   border-radius: 5px;
+}
+
+.searchbar button {
+  background-color: #06f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+  .searchbar a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+.searchbar form button {
+  display: none;
+}
+  
+  .modal {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+  
+      .modal-content {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #444242;
+        padding: 20px;
+        border-radius: 5px;
+      }
+  
+    #login {
+     
+      text-align: center;
+      padding: 1%;
+    }
+  
+    #login .form-group {
+      margin-top: 3%;
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+  
+    #login button {
+      margin: 3%;
+    }
+  
+    #register {
+     
+     text-align: center;
+     padding: 1%;
+   }
+  
+   #register .form-group {
+     margin-top: 3%;
+     padding-left: 7%;
+     padding-right: 7%;
+   }
+  
+   #register button {
+     margin: 3%;
+   }
+  
+ 
+  .cards {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .post-card {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #424242;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    width: 25%;
+    min-height: 500px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  
+  .post-card img {
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .divImg{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  /* Estilos adicionales para elementos dentro de .post-card */
+  .post-card h2, .post-card .username, .post-card .content {
+    margin: 10px 0;
+  }
+  
+  .post-card .content {
+    background-color: #2E2E2E;
+    padding: 15px;
+    border-radius: 4px;
+    color: #dcdcdc;
+  }
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* Ajusta el margen superior para centrar mejor el modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Ajusta el ancho para que no sea demasiado grande ni pequeño */
+  border-radius: 10px; /* Bordes redondeados para una apariencia más suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 20px; /* Espacio adicional para evitar que se superponga con el texto */
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos adicionales para el contenido del modal */
+#postTitle {
+  margin-bottom: 20px; /* Espacio extra entre el título y la imagen */
+}
+
+#postImage {
+  max-width: 10%; /* Asegura que la imagen no sobrepase el ancho del modal */
+  max-height: 400px; /* Mantiene la proporción de la imagen */
+  display: block; /* Evita espacios extra debajo de la imagen */
+  margin: 0 auto; /* Centra la imagen en el modal */
+
+}
+
+#postContent {
+  margin-top: 20px; /* Espacio extra entre la imagen y el contenido del texto */
+}
+
+.searchbar{
+  align-items: center;
+  align-content: center;
+text-align: center;
+  min-width: fit-content;
+  min-height: fit-content;
+  padding: 5px;
+  background-color: #424242;
+  border-radius: 10px;
+  
+}
+
+.inputBuscar{
+  align-items: center;
+  align-content: center;
+text-align: center;
+background-color: #424242;
+color: white;
+}

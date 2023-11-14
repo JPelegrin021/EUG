@@ -1,0 +1,56 @@
+.cards {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .post-card {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: #424242;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    width: 25%;
+    min-height: 500px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  
+  .post-card img {
+    display: flex;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .divImg{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  /* Estilos adicionales para elementos dentro de .post-card */
+  .post-card h2, .post-card .username, .post-card .content {
+    margin: 10px 0;
+  }
+  
+  .post-card .content {
+    background-color: #2E2E2E;
+    padding: 15px;
+    border-radius: 4px;
+    color: #dcdcdc;
+  }

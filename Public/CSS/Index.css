@@ -1,0 +1,163 @@
+body {
+  font-family: sans-serif;
+  background-color: #f1f1f1;
+}
+
+/*header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+header img {
+  height: 40px;
+}*/
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000;
+}
+
+/*nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+nav a {
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #ccc;
+}
+*/
+#mapa iframe{
+  width: 100%;
+  height: 450px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+}
+
+#contenido {
+  padding: 20px;
+}
+
+#qso h2 {
+  color: rgb(255, 255, 255);
+}
+
+#qso {
+  display: flex;
+  gap: 2%;
+  padding: 2%;
+}
+
+#qs {
+  text-align: center;
+  border: 3px solid rgb(121, 123, 126);
+  border-radius: 5px;
+  background-color: #ffffffa0;
+}
+
+#qo {
+  text-align: center;
+  border: 3px solid rgb(121, 123, 126);
+  border-radius: 5px;
+  background-color: #ffffffa0;
+}
+
+#cntsp {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffffa0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.prtnr {
+  padding: 2%;
+  width: 60%;
+  margin-inline-end: 0,5%;
+  border-radius: 5px;
+  mix-blend-mode: color-burn;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  margin-left: 2%;
+}
+
+#qso p {
+  font-size: 1em;
+  color: #666;
+  padding: 10%;
+}
+
+#Contacto {
+  padding-top: 3%;
+  padding-left: 10%;
+}
+
+#Contacto input {
+  background-color: #ffffffa0;
+  border-radius: 2px;
+}
+
+#Contacto button {
+  background-color: #06f;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 1%;
+}
+
+form {
+  display: grid;
+  row-gap: 10%;
+}
+
+/*footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+*/
+.boton {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.boton:hover {
+  background-color: #ccc;
+}
+
+/* Formas personalizadas */
+
+.circulo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}
+
+.cuadrado {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+}

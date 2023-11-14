@@ -1,0 +1,56 @@
+/*CSS NavBar General*/
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    width: 100%;
+  }
+
+header {
+    background-color: #444242;
+    opacity: 80%;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    margin: 2%;
+    border-radius: 12px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  nav a {
+    background-color: #06f;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 1%;
+  }
+  
+  nav span {
+    justify-content: flex-end;
+  }
+
+  nav a:hover {
+    background-color: rgb(10, 88, 206);
+  }
+  header img {
+    width: 85px !important;
+    max-width: 85px !important;
+  }
+
+/*CSS Footer General*/
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    background-color: #444242;
+    opacity: 80%;
+    color: #fff;
+    margin: 2%;
+    border-radius: 12px;
+  }
