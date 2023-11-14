@@ -1,0 +1,22 @@
+.like-btn {
+    color: #333; /* Color por defecto del corazón */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .like-btn.liked {
+    color: red; /* Color del corazón cuando está 'liked' */
+  }
+  
+  .like-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-count {
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+  

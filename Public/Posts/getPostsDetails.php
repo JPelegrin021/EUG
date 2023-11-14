@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../DB/dbconnect.php'; // Asegúrate de que esta ruta sea correcta
 
 include 'GetPosts.php'; // Asegúrate de que esta ruta sea correcta

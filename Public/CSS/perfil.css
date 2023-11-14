@@ -7,6 +7,7 @@
   }
   
   .post-card {
+    display: grid;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -54,3 +55,34 @@
     border-radius: 4px;
     color: #dcdcdc;
   }
+
+  .Resumen{
+    margin-top: 10px;
+    background-color: #2E2E2E !important;
+    padding:15px; 
+    border-radius:4px; 
+    color:white;
+  }
+
+  .like-btn {
+    color: #333; /* Color por defecto del corazón */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  .like-btn.liked {
+    color: red; /* Color del corazón cuando está 'liked' */
+  }
+  
+  .like-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .like-count {
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+  

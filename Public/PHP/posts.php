@@ -16,7 +16,7 @@
           echo '<span>Hola, ' . htmlspecialchars($_SESSION['usuario']) . '</span>';
           echo '<a href="../Login/logout.php">Cerrar Sesión</a>';
       } else {
-          echo '<a href="#" id="loginBtn">Login</a>';
+          echo '<a href="#" id="loginBtn" style="display:none;">Login</a>';
       }
       ?>
   <header>

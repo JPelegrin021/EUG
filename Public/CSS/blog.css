@@ -158,6 +158,7 @@ body {
   }
   
   .post-card {
+    display: grid;
     text-align: center;
     align-items: center;
     align-content: center;
@@ -279,4 +280,68 @@ text-align: center;
 text-align: center;
 background-color: #424242;
 color: white;
+}
+
+
+/* Estilos para el modal de comentarios */
+#postModal .modal-content {
+  background-color: #333; /* Fondo oscuro para un look moderno */
+  color: #fff; /* Texto claro */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.like-btn {
+  color: #333; /* Color por defecto del corazón */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.like-btn.liked {
+  color: red; /* Color del corazón cuando está 'liked' */
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+}
+
+.like-count {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+
+.formComment{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  background-color: #2E2E2E;
+  border-radius: 4px;
+  padding: 5px;
+}
+.CommentArea{
+ background-color: #424242;
+ border:none;
+ border-radius: 4px;
+
+}
+.publish{
+  color: white;
+  text-decoration: none;    
+  background-color: #06f;
+  border-radius: 5px;
+  border: none;
+  margin-left: 2px;
+
+}
+
+.Comments{
+  background-color: #2E2E2E;
+  padding: 10px;
+  border-radius: 10px ;
 }

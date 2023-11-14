@@ -66,17 +66,17 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
                 echo '<td>
                 <form action="../AdminPosts/DeletePosts.php" method="post">
                     <input type="hidden" name="post_id" value="' . htmlspecialchars($post['Code']) . '">
-                    <input type="submit" value="Eliminar" onclick="updateActivity(); " return confirm(\'¿Estás seguro de que deseas eliminar este post?\');">
+                    <input type="submit" value="Eliminar" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este post?\'); updateActivity();">
                 </form>
               </td>';
               echo '<td>
-              <button onclick="updateActivity(); " openEditModal(
+              <button onclick="openEditModal(
                 \'' . htmlspecialchars($post['Code']) . '\',
                 \'' . htmlspecialchars(addslashes($post['Title'])) . '\',
                 \'' . htmlspecialchars(addslashes($post['Resume'])) . '\',
                 \'' . htmlspecialchars(addslashes($post['Content'])) . '\',
                 \'' . htmlspecialchars(addslashes($post['Image'])) . '\'
-              )">Editar</button>
+              ); updateActivity(); ">Editar</button>
             </td>';
                 echo '</tr>';
             }
@@ -88,7 +88,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 <!-- Modal de edición de posts -->
 <div id="editPostModal" class="modal" style="display:none;">
     <div class="modal-content">
-        <span class="close" onclick="updateActivity(); " closeEditModal()">&times;</span>
+        <span class="close" onclick="closeEditModal(); updateActivity();">&times;</span>
         <h2 style="color:white;">Editar Post</h2>
         <form id="editPostForm" action="../AdminPosts/UpdatePosts.php" method="post" enctype="multipart/form-data"  style="background-color:#424242 !important; padding-right:100px;">
             <input type="hidden" name="post_id" id="editPostId">
@@ -148,7 +148,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
         echo '<td>
         <form action="../AdminUsers/DeleteUsers.php" method="post">
             <input type="hidden" name="user_id" value="' . htmlspecialchars($user['Code']) . '">
-            <input type="submit" value="Eliminar" onclick="updateActivity(); " return confirm(\'¿Estás seguro de que deseas eliminar este usuario?\');">
+            <input type="submit" value="Eliminar" onclick=" return confirm(\'¿Estás seguro de que deseas eliminar este usuario?\');updateActivity();">
         </form>
       </td>';
         echo '</tr>';
@@ -157,6 +157,42 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 </tbody>
     </table>
 </section>
+
+<section>
+    <h2 style="color:white;">Comentarios del Blog</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Comentario</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            include '../Posts/GetAllComments.php';// Aquí deberías incluir tu archivo getcomments.php y llamar a una función que obtenga los comentarios
+            foreach ($comments as $comment) {
+                echo '<tr>';
+                echo '<td>' . htmlspecialchars($comment['Code']) . '</td>';
+                echo '<td>' . htmlspecialchars($comment['UserName']) . '</td>';
+                echo '<td>' . htmlspecialchars($comment['Comment']) . '</td>';
+                echo '<td>' . htmlspecialchars($comment['Date']) . '</td>';
+                echo '<td>
+                <form action="../Posts/DeleteComment.php" method="post">
+                    <input type="hidden" name="comment_id" value="' . htmlspecialchars($comment['Code']) . '">
+                    <input type="submit" value="Eliminar" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este comentario?\');">
+                </form>
+              </td>';            
+                echo '</tr>';
+            }
+            
+            ?>
+        </tbody>
+    </table>
+</section>
+
 
 <footer>
     <p>&copy; 2023 NewsWave</p>

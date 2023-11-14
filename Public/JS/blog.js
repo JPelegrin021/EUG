@@ -113,15 +113,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 });
-function openModal(title, imageSrc, content) {
-  document.getElementById('postTitle').textContent = title;
-  document.getElementById('postImage').src = imageSrc;
-  document.getElementById('postContent').textContent = content;
-  document.getElementById('postModal').style.display = 'block';
-}
+function openModal(title, imageSrc, content, postCode) {
+    // Configurar el modal
+    document.getElementById('postTitle').textContent = title;
+    document.getElementById('postImage').src = imageSrc;
+    document.getElementById('postContent').textContent = content;
+    
+    // Llamar a GetComments.php para cargar los comentarios
+    fetch('../Posts/GetComments.php?postCode=' + postCode)
+      .then(response => response.json())
+      .then(comments => {
+        console.log(comments);
+          let commentsHtml = '';
+          comments.forEach(comment => {
+              commentsHtml += '<div class="comment" style="background-color: #2E2E2E; padding: 10px; border-radius: 10px ; margin-top:10px; width:96%;">';
+              commentsHtml += '<div style="background-color: #2E2E2E; display:flex; width:100%;">';
+              commentsHtml += '<p style="width: 50%;">Escrito por: ' + comment.UserName + '</p>';
+              commentsHtml += '<p style="width: 50%;">Fecha: ' + comment.Date + '</p>';
+              commentsHtml += '</div>';
+              commentsHtml += '<p style="display:flex; padding: 6px; background-color:#333; border-radius:6px;">' + comment.Comment + '</p>';
+              commentsHtml += '</div>';
+          });
+          document.getElementById('postComments').innerHTML = commentsHtml;
+      })
+      .catch(error => console.error('Error:', error));
+  
+    document.getElementById('postModal').style.display = 'block';
+  }
+  
 
 function closeModal() {
   document.getElementById('postModal').style.display = 'none';
 }
 
-    
+
+function addLike(postCode) {
+    fetch('../Posts/addLike.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'postCode=' + postCode
+    })
+    .then(response => response.text())
+    .then(response => {
+        const likeButton = document.querySelector('.like-btn[data-post-code="' + postCode + '"]');
+        const likeCountSpan = document.querySelector('.like-count[data-post-code="' + postCode + '"]');
+
+        if (likeButton && likeCountSpan) {
+            let currentLikes = parseInt(likeCountSpan.textContent);
+            if (isNaN(currentLikes)) currentLikes = 0;
+
+            if (response.includes("agregado")) {
+                // Like fue agregado
+                likeButton.classList.add('liked');
+                likeCountSpan.textContent = (currentLikes + 1) + ' likes';
+            } else if (response.includes("eliminado")) {
+                // Like fue eliminado
+                likeButton.classList.remove('liked');
+                likeCountSpan.textContent = (currentLikes - 1) + ' likes';
+            }
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+

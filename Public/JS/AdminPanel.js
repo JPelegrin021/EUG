@@ -4,12 +4,7 @@ window.onbeforeunload = function() {
   
   navigator.sendBeacon('../Posts/updateActivity.php'); // Utiliza sendBeacon para llamadas en background
 };
-function updateActivity() {
-  $.ajax({
-      url: '../Posts/updateActivity.php', // Asegúrate de que la ruta sea correcta
-      method: 'POST'
-  });
-}
+
 
 function openEditModal(code, title, resume, content, image) {
   document.getElementById('editPostId').value = code;

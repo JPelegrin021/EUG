@@ -1,4 +1,3 @@
-
 window.onbeforeunload = function() {
     var data = new FormData();
     data.append('update', 'true');
