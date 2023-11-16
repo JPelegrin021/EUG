@@ -25,7 +25,6 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
     <h1 style="color:white;">AdminPanel</h1>
     <nav>
         <a href="../../index.php">Inicio</a>
-        <a href="#">Categorías</a>
         <?php
         if (isset($_SESSION['usuario']) && $_SESSION['admin'] == 1) {
             echo '<a href="blog.php">Blog</a>';

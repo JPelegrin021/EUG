@@ -1,0 +1,143 @@
+/* Encabezados */
+h1, h2, h3 {
+  color: #444; /* Color de texto oscuro para buena legibilidad */
+  margin-top: 0;
+}
+
+/* Enlaces */
+a {
+  color: #06f; /* Color azul para los enlaces */
+  text-decoration: none; /* Sin subrayado por defecto */
+}
+
+a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón por encima */
+}
+
+/* Botones */
+button {
+  background-color: #fff; /* Fondo blanco para los botones */
+  color: #333; /* Texto oscuro para contraste */
+  border: 1px solid #ddd; /* Borde sutil */
+  padding: 10px 15px;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor en forma de mano al pasar el ratón por encima */
+  transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+button:hover {
+  background-color: #eee; /* Cambio de color al pasar el ratón por encima */
+}
+
+/* Formularios */
+form {
+  background-color: #fff; /* Fondo blanco para los formularios */
+  padding: 20px;
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 5px; /* Bordes redondeados */
+  max-width: 600px; /* Ancho máximo para evitar formularios demasiado grandes */
+  margin: 20px auto; /* Centrado y con margen */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Espaciado entre grupos de formularios */
+}
+
+label {
+  display: block; /* Etiquetas en bloque */
+  margin-bottom: 5px; /* Margen debajo de las etiquetas */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%; /* Ancho completo */
+  padding: 10px;
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+input[type="submit"] {
+  background-color: #06f; /* Fondo azul para botones de enviar */
+  color: white; /* Texto blanco para contraste */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón por encima */
+}
+
+/* Tablas */
+  width: 90%; /* Ancho completo */
+  border-collapse: collapse; /* Sin espacios entre bordes de celdas */
+  margin-top: 20px; /* Margen superior */
+  background-color: #424242;
+  margin: 2%;
+  border-collapse: separate; /* Importante para bordes redondeados */
+  border-spacing: 0;
+}
+
+  padding: 10px; /* Acolchado para celdas */
+  border: 0.5px solid white; /* Borde sutil */
+  text-align: center; /* Texto centrado */
+}
+
+  background-color: #424242; /* Fondo gris claro para cabeceras */
+}
+
+  border-top-left-radius: 10px; /* Radio de esquina redondeada */
+}
+
+  border-top-right-radius: 10px; /* Radio de esquina redondeada */
+}
+
+/* Esquinas inferiores redondeadas para el primer y último td de la última fila */
+  border-bottom-left-radius: 10px; /* Radio de esquina redondeada */
+}
+
+  border-bottom-right-radius: 10px; /* Radio de esquina redondeada */
+}
+
+
+/* Modern and consistent table styling */
+
+table {
+  width: 100%; /* Full width for better use of space */
+  border-collapse: collapse; /* No space between cells */
+  margin: 20px 0; /* Spacing around the table */
+  background-color: #f2f2f2; /* Light gray background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+table th, table td {
+  padding: 15px; /* More padding for a better look */
+  border-bottom: 1px solid #ccc; /* Light gray border for each row */
+  text-align: left; /* Align text to the left for better readability */
+  font-size: 16px; /* Slightly larger font size */
+}
+
+table th {
+  background-color: #555; /* Darker gray for headers */
+  color: white; /* White text for contrast */
+  font-family: 'Roboto', sans-serif; /* Consistent font with the rest of the site */
+}
+
+table tr:hover {
+  background-color: #eeeeee; /* Slightly darker background on hover */
+}
+
+table tr:last-child td {
+  border-bottom: none; /* No border for the last row */
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%; /* Ensure table is not wider than the screen */
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+  }
+}

@@ -1,0 +1,55 @@
+
+/*CSS NavBar and Footer General*/
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Modern font */
+  background-color: #333; /* Dark gray background */
+  color: white;
+  width: 100%;
+}
+
+header, footer {
+  background-color: #444; /* Slightly lighter gray */
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  color: #fff;
+  margin: 2%;
+  border-radius: 12px;
+  opacity: 100%; /* Solid color */
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+nav a {
+  background-color: #555; /* Gray background for links */
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 1%;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+  background-color: #777; /* Lighter gray on hover */
+}
+
+header img {
+  width: 85px !important;
+  max-width: 85px !important;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  /* Styles for smaller screens */
+}

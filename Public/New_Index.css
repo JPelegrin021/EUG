@@ -1,0 +1,71 @@
+
+/* General body styling */
+body {
+  font-family: 'Roboto', sans-serif; /* Consistent with the main style */
+  background-color: #f2f2f2; /* Light gray background */
+  color: #333; /* Dark gray text */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #444;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main content area */
+.main-content {
+  padding: 20px;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Styling for articles or main sections */
+.article {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Footer styling */
+footer {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  .main-content, .article {
+    padding: 10px;
+  }
+}
