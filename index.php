@@ -51,7 +51,7 @@ if(isset($_SESSION['mensaje'])){
   </section>
 
   <section id="contenido">
-    <div id="qso">
+    <div id="qso" class="tarjeta">
     <div id="qs">
     <h2>Quiénes somos</h2>
     <p>
@@ -65,7 +65,7 @@ if(isset($_SESSION['mensaje'])){
     </p>
     </div>
    </div>
-    <div id="cntsp">
+    <div id="cntsp" class="tarjeta">
     <div id="Contacto">
     <h2>Contacto</h2>
     <form action="#">

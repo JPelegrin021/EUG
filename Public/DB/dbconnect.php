@@ -1,5 +1,5 @@
 <?php
-$host = '62.174.185.134';
+$host = 'servergj.ddns.net';
 $user = 'Remoto';
 $password = '54er.2lYP9oK/';
 $database = 'Blog';

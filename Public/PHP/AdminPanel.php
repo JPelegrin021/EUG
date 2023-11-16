@@ -36,7 +36,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 </header>
 
 <main>
-    <h2 style="color:white;">Posts del Blog</h2>
+    <h2 >Posts del Blog</h2>
     <div><button type="button"><a href="postsAdmin.php">Crear Post</a></button></div>
     <table>
         <thead>
@@ -89,20 +89,20 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 <div id="editPostModal" class="modal" style="display:none;">
     <div class="modal-content">
         <span class="close" onclick="closeEditModal(); updateActivity();">&times;</span>
-        <h2 style="color:white;">Editar Post</h2>
-        <form id="editPostForm" action="../AdminPosts/UpdatePosts.php" method="post" enctype="multipart/form-data"  style="background-color:#424242 !important; padding-right:100px;">
+        <h2>Editar Post</h2>
+        <form id="editPostForm" action="../AdminPosts/UpdatePosts.php" method="post" enctype="multipart/form-data"  style="padding-right:100px;">
             <input type="hidden" name="post_id" id="editPostId">
             <div class="form-group">
                 <label for="editTitulo">Título</label>
-                <input type="text" name="titulo" id="editTitulo" placeholder="Título del post"  style="background-color:#424242 !important;">
+                <input type="text" name="titulo" id="editTitulo" placeholder="Título del post">
             </div>
             <div class="form-group">
                 <label for="editResumen">Resumen</label>
-                <textarea name="resumen" id="editResumen" rows="5" placeholder="Resumen del post"  style="background-color:#424242 !important;"></textarea>
+                <textarea name="resumen" id="editResumen" rows="5" placeholder="Resumen del post"></textarea>
             </div>
             <div class="form-group">
                 <label for="editContenido">Contenido</label>
-                <textarea name="contenido" id="editContenido" rows="10" placeholder="Contenido del post"  style="background-color:#424242 !important;"></textarea>
+                <textarea name="contenido" id="editContenido" rows="10" placeholder="Contenido del post"></textarea>
             </div>
             <div class="form-group">
                 <label for="editImagen">Imagen</label>
@@ -120,7 +120,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 
 <!-- Aquí comienza la nueva sección de la tabla de usuarios -->
 <section>
-    <h2 style="color:white;">Usuarios del Blog</h2>
+    <h2>Usuarios del Blog</h2>
     <table>
         <thead>
             <tr>
@@ -159,7 +159,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['admin'] != 1) {
 </section>
 
 <section>
-    <h2 style="color:white;">Comentarios del Blog</h2>
+    <h2>Comentarios del Blog</h2>
     <table>
         <thead>
             <tr>

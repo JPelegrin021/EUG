@@ -1,9 +1,4 @@
-body {
-    font-family: sans-serif;
-    background-color: black;
-    color: white;
-    width: 100%;
-  }
+
 
   
   header h1 {
@@ -15,19 +10,7 @@ body {
   margin-right: 2%;
 
   }
-  header {
-    background-color: #444242;
-    opacity: 80%;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    color: #fff;
-    margin: 2%;
-    border-radius: 12px;
-  }
-  
-  header img {
-    width: 85px;
-  }
+ 
   
   h1 {
     font-size: 2em;
@@ -37,28 +20,6 @@ body {
   }
   
 
-  nav {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  nav a {
-    background-color: #06f;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 1%;
-  }
-  
-  nav span {
-    justify-content: flex-end;
-  }
-
-  nav a:hover {
-    background-color: rgb(10, 88, 206);
-  }
   
   #contenido {
     padding: 20px;
@@ -103,6 +64,7 @@ body {
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
       }
   
       .modal-content {
@@ -171,6 +133,7 @@ body {
     width: 25%;
     min-height: 500px;
     border-bottom: 1px solid #ccc;
+    color: #fff;
   }
   
   /* Ajustes para pantallas pequeñas */

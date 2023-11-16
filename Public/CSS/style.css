@@ -1,56 +1,95 @@
-/*CSS NavBar General*/
+
+
 body {
-    font-family: sans-serif;
-    background-color: black;
-    color: white;
-    width: 100%;
-  }
+  line-height: 1;
+  font-family: 'Roboto', sans-serif; /* Modern and clean font */
+  background-color: #cacaca; /* Light gray background */
+  color: #333; /* Dark gray text for readability */
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Main styling starts here */
 
 header {
-    background-color: #444242;
-    opacity: 80%;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    color: #fff;
-    margin: 2%;
-    border-radius: 12px;
-  }
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  nav {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  nav a {
-    background-color: #06f;
-    padding: 10px 20px;
-    font-size: 1.5em;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 1%;
-  }
-  
-  nav span {
-    justify-content: flex-end;
-  }
+header img {
+  height: 70px;
+}
 
-  nav a:hover {
-    background-color: rgb(10, 88, 206);
-  }
-  header img {
-    width: 85px !important;
-    max-width: 85px !important;
-  }
+nav {
+  background-color: #555;
+  overflow: hidden;
+}
 
-/*CSS Footer General*/
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #777;
+}
+
 footer {
-    padding: 20px;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    background-color: #444242;
-    opacity: 80%;
-    color: #fff;
-    margin: 2%;
-    border-radius: 12px;
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+.button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  nav a {
+    float: none;
+    width: 100%;
   }
+}
